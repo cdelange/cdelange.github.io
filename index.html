@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('cloud.jpg');
+            background-repeat: repeat;
+            /* Allow the background image to tile */
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            cursor: url(https://ani.cursors-4u.net/symbols/sym-9/sym827.ani), url(https://ani.cursors-4u.net/symbols/sym-9/sym827.png), auto !important;
+            overflow-x: hidden;
+            /* Prevent horizontal scrolling */
+        }
+
+        .container {
+            width: 90%;
+            height: auto;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: flex;
+            align-items: center;
+            flex-direction: column
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                width: 70%;
+                /* Adjusted width for desktops */
+            }
+
+        }
+
+        .titlecontainer {
+            display: flex;
+            width: 70%;
+            /* Full width of the container */
+            justify-content: center;
+            /* Distribute items evenly */
+            align-items: center;
+            /* Center items vertically */
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .titlecontainer {
+                width: 70%;
+            }
+        }
+
+        }
+
+        .title {
+            flex: 8;
+            /* Take up 80% of the available space */
+            max-width: 80%;
+            /* Limit maximum width */
+            text-align: center;
+            /* Center-align text */
+            margin: 10px;
+        }
+
+        .rose {
+            flex: 1;
+            /* Take up 10% of the available space */
+            max-width: 10%;
+            /* Limit maximum width */
+            display: block;
+            /* Ensure the image behaves as a block element */
+        }
+
+        h4 {
+            color: black;
+            margin-top: 0;
+        }
+
+        p {
+            margin: 5px 0;
+            color: black;
+        }
+
+        marquee {
+            margin-top: 10px;
+            color: black;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <audio id="music" src="onlytime.mp3" style="display: none;" loop></audio>
+
+    <div class="container">
+        <div class="titlecontainer">
+            <img class="rose" src="r1.gif" alt="Rose 1">
+            <img class="title" src="title.gif" alt="Title">
+            <img class="rose" src="r2.gif" alt="Rose 2">
+        </div>
+
+
+
+        <img id="startbtn" style="width: 70px;" src="speakeranimated.gif">
+
+
+        <p>Date: May 29 - June 2, 2025</p>
+        <p>Location: Seguin, TX</p>
+        <p>Join us for a long weekend on the river with family and friends!</p>
+
+        <marquee>Rain or Shine!</marquee>
+
+        <img src="doll.png" width="100">
+        <img src="http://www.fillster.com/images/dividers/6y.gif">
+        <!-- <img src="https://www.fillster.com/images/dividers/150w.gif"> -->
+        <!-- Info on accomodations and logistics -->
+        <p>Accommodations</p>
+        <img
+            src="https://images.squarespace-cdn.com/content/v1/54089c91e4b007c79841169a/1563009141555-24ZXF3JP2BAN92UMFCDP/public.jpeg?format=400w">
+        <img
+            src="https://images.squarespace-cdn.com/content/v1/54089c91e4b007c79841169a/1563002585979-T5CW68OHEYHN5YUV5YKH/IMG_0211.jpeg?format=400w">
+        <img src="https://dl.glitter-graphics.com/pub/152/152179h4qroi8q2b.gif">
+
+        <!-- RVSP here (google form link) can they updates? -->
+        <p>Getting there</p>
+        <!-- How we will send out updates (text blasts) -->
+        <p>Things to do</p>
+
+        <script>
+            const startbtn = document.getElementById("startbtn");
+            const content = document.getElementById("content");
+            const loader = document.getElementById("loader");
+            const music = document.getElementById("music");
+
+            startbtn.addEventListener("click", () => {
+                music.paused ? music.play() : music.pause();
+            });
+        </script>
+
+</body>
+
+</html>

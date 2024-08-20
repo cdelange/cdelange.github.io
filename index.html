@@ -7,50 +7,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Us</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
-
     <style>
+        html {
+            height: 100%;
+        }
+
         body {
             margin: 0;
-            padding: 0;
-            background-image: url('cloud.jpg');
+            background-image: url('clouds2.jpeg');
             background-repeat: repeat;
-            /* Allow the background image to tile */
-            font-family: sans-serif;
+            font-family: Times, "Times New Roman", serif;
+            line-height: 1.6;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            cursor: url(https://ani.cursors-4u.net/symbols/sym-9/sym827.ani), url(https://ani.cursors-4u.net/symbols/sym-9/sym827.png), auto !important;
-            overflow-x: hidden;
-            /* Prevent horizontal scrolling */
+            cursor: url(http://www.rw-designer.com/cursor-extern.php?id=93564), url(210513.png), auto;
+        }
+
+        /* Custom scrollbar for WebKit browsers with a blue and white sky color scheme */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #deedf6;
+            /* Light Sky Blue */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #4682B4;
+            /* Steel Blue */
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4169E1;
+            /* Royal Blue */
         }
 
         .container {
             width: 90%;
-            height: auto;
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.9);
             display: flex;
             align-items: center;
-            flex-direction: column
+            flex-direction: column;
+            padding-left: 3%;
+            padding-right: 3%;
+            height: 100%;
         }
 
         @media (min-width: 768px) {
             .container {
-                width: 70%;
-                /* Adjusted width for desktops */
+                width: 60%;
             }
-
         }
 
         .titlecontainer {
             display: flex;
             width: 70%;
-            /* Full width of the container */
             justify-content: center;
-            /* Distribute items evenly */
             align-items: center;
-            /* Center items vertically */
             margin-top: 20px;
             margin-bottom: 20px;
         }
@@ -61,25 +76,17 @@
             }
         }
 
-        }
-
         .title {
             flex: 8;
-            /* Take up 80% of the available space */
             max-width: 80%;
-            /* Limit maximum width */
             text-align: center;
-            /* Center-align text */
-            margin: 10px;
+            margin: 20px;
         }
 
         .rose {
             flex: 1;
-            /* Take up 10% of the available space */
             max-width: 10%;
-            /* Limit maximum width */
             display: block;
-            /* Ensure the image behaves as a block element */
         }
 
         h4 {
@@ -102,57 +109,210 @@
             max-width: 100%;
             height: auto;
         }
+
+        body {
+            margin: 0;
+            background-color: #d3d3d3;
+            /* Light grey background */
+        }
+
+        .outer-frame {
+            width: auto;
+            padding: 3px;
+            border: 1px solid rgb(122, 122, 122);
+            margin: 0 auto;
+            background-color: #ffffff00;
+            /* Same background as body */
+            text-align: center;
+        }
+
+        .inner-frame {
+            padding: 15px;
+            border: .5px solid rgb(55, 55, 55);
+            background-color: #ffffff00;
+            /* Same background as body */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     </style>
 </head>
 
 <body>
-    <audio id="music" src="onlytime.mp3" style="display: none;" loop></audio>
+    <marquee behavior=scroll direction=up scrollamount=6 scrolldelay=11 height=551
+        style='position:absolute; left:3%; top:142px; width:46; height:551px;'><img
+            src=http://www.fillster.com/images/graphics/482k.gif width="80"></marquee>
+    <marquee behavior=scroll direction=up scrollamount=3 scrolldelay=17 height=651
+        style='position:absolute; left:95%; top:98px; width:46; height:651px;'><img
+            src=http://www.fillster.com/images/graphics/482k.gif width="80"></marquee>
+    <marquee behavior=scroll direction=up scrollamount=4 scrolldelay=48 height=519
+        style='position:absolute; left:87%; top:183px; width:46; height:519px;'><img
+            src=http://www.fillster.com/images/graphics/482k.gif width="80"></marquee>
+    <marquee behavior=scroll direction=up scrollamount=5 scrolldelay=38 height=591
+        style='position:absolute; left:10%; top:85px; width:46; height:591px;'><img
+            src=http://www.fillster.com/images/graphics/482k.gif width="80"></marquee>
 
+    <!-- Other marquee elements -->
+    <audio id="music" src="onlytime.mp3" style="display: none;" loop></audio>
+    <br /> <br /> <br />
     <div class="container">
         <div class="titlecontainer">
-            <img class="rose" src="r1.gif" alt="Rose 1">
-            <img class="title" src="title.gif" alt="Title">
-            <img class="rose" src="r2.gif" alt="Rose 2">
+            <img src="http://www.gigaglitters.com/created/KY7fLCV8yv.gif" width="300" /></a>
+            <br /> <br />
         </div>
 
 
 
-        <img id="startbtn" style="width: 70px;" src="speakeranimated.gif">
+        <div class="centered">
+            <p>Welcome to Casey and Allie's <s>wedding</s> marriage celebration website! We
+                hope you'll be able to join us in May 2025 for
+                a weekend of fun and relaxation on the Guadalupe River.</p><br />
+        </div>
 
+        <div class="outer-frame">
+            <div class="inner-frame">
+                <img src="texas.gif">
+                <p>May 29 - June 2, 2025</p>
+                <p>460 River Dr, Seguin, TX 78155</p>
+            </div>
+        </div>
+        <br />
+        <!-- <div style="text-align: left; margin: 10px 0px;">
+            <div style="float: left; margin: 0px 60px 3px 0px;"><img src="doll.png" width="100"></div>
+            <span> Welcome to our <s>wedding</s> marriage celebration website! We
+                hope you'll be able to join us in May 2025 for
+                a weekend of fun and relaxation on the Guadalupe River.
+        </div> -->
+        <!-- <div style="text-align: center;">
+            <div style="position: relative">
+                <img src="wizard_raisehands_sm_clr.gif" alt="Wizard GIF">
+                <img src="bluebook.gif" alt="Blue Book" style="position: absolute; z-index: 2;top: 30px;left: 45px;">
+            </div>
+        </div> -->
+        <img src="book1.gif" alt="Wizard GIF">
+        <!-- <img src="bluebook.gif"> -->
+        <marquee>Ready to RSVP? Click the book!</marquee>
+        <br /> <img src="tour2.gif" width="500" style="border: 5px solid #4169E1;">
+        <br /><img src="http://www.gigaglitters.com/created/KbbOZZaSQw.gif" width="300" height="48" /></a>
+        <br />
+        <p>Most guests will be joining us at The River Haven, a sprawling
+            11-bedroom home on the Guadalupe River.
+            <br />
 
-        <p>Date: May 29 - June 2, 2025</p>
-        <p>Location: Seguin, TX</p>
-        <p>Join us for a long weekend on the river with family and friends!</p>
+            <br />
+            Here are some highlights of the property:
+        </p>
+        <ul>
+            <li>11 bedrooms, 5.5 bathrooms, 3 kitchens: Plenty of space
+                for everyone.</li>
+            <li>Direct private river access: Perfect for kayaking,
+                fishing, and swimming.</li>
+            <li>Huge shaded yard: Great for outdoor games and relaxing
+                under the 120+ year old pecan shade trees.</li>
+            <li>Large fire pit: For evening s’mores and stories
+                under the stars.</li>
+        </ul>
+        <a target="_blank" href="https://www.theriverhaven.com/"><img src="blinkiesCafe-RA.gif" width="175 px" ;></a>
+        <br />
+        <marquee direction="right" marquee scrollamount="15"><img src="runningunicorn.gif" width="175" /></marquee>
+        <br /><img src="http://www.gigaglitters.com/created/UetwMgEVFu.gif" /></a>
+        <br>
+        <br />Fly in to San Antonio airport. River Haven is about 45
+        minutes outside of town. We'll coordinate
+        pickups and/or Ubers closer
+        to the event.
+        </p>
+        <img src="https://web.archive.org/web/20091027091510im_/http://www.geocities.com/Paris/Salon/8611/anibf.gif">
+        <br /><img src="http://www.gigaglitters.com/created/jUzuGCMus3.gif" /></a>
+        <div style="text-align: left; margin: 10px 0px;">
+            <div style="float: left; margin: 0px 60px 3px 0px;"><img
+                    src="https://dl.glitter-graphics.com/pub/2790/2790150kojf00v1al.gif" width="180"></div>
+            <span><b>Wednesday, May 28:</b> Casey and Allie will be at the house getting everything ready for the
+                celebration.
+                Feel free to arrive early and lend a hand with the preparations!
+                <br /> <b>Thursday May 29:</b> Most guests are expected to arrive today. We’ll kick off the
+                festivities
+                with
+                dinner
+                and a toast around the bonfire.
+                <br /><b>Friday May 30: </b> River day! Spend the day enjoying the water.
+                <br /><b>Saturday May 31:</b> It's party time! We'll be hosting a big catered crawfish boil,
+                complete
+                with all
+                the
+                fixings. Come hungry!
+                <br /><b>Sunday June 1:</b> A day to relax and unwind. Swim, fish, or even explore New Braunfels.
+                <br /> <b>Monday June 2:</b> Time to head home! </a>
+        </div>
+        <br />
+        <br />
+        <br /><img src="http://www.gigaglitters.com/created/a7efGTp91x.gif" /></a>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <p style="margin-right: 20px; margin-left: 5px; flex: 1;">
+            <ul>
+                <li>Comfortable clothing for warm weather (don't forget your
+                    swimmies!) and water shoes</li>
+                <li>Fishing gear</li>
+                <li>Sunscreen and bug spray</li>
+            </ul>
+            </p>
+            <img src="mermaid_brunetteb.gif" alt="Image description"
+                style="max-width: 50%; padding-right: 20px; height: auto;">
+        </div><img src="http://www.gigaglitters.com/created/tFpQ3N5RgY.gif" />
 
-        <marquee>Rain or Shine!</marquee>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Custom Bulleted List</title>
+            <style>
+                ul {
+                    list-style-image: url('https://dl.glitter-graphics.com/pub/637/637123nx51zf2ay5.gif');
+                }
+            </style>
+        </head>
+        <div style="height: 100%; text-align: left; margin: 10px 0px;">
+            <img src="walkingwizard.gif" border="0" align="left" hspace="10" vspace="3" alt="Wrap Text around Image" />
+            <span>
+                <p><b>Is this a wedding?</b></p>No! We're thinking of this as a friends and family reunion. There will
+                be no
+                ceremony, no wedding dresses, and no flower girls!
+                <br />
+                <br clear="left" />
+                <p><b>Can we still get you a gift?</b></p>In lieu of gifts, we're taking a small fee to cover the cost
+                of
+                the house and catering.<br /><br />
+                <p><b>How do I RSVP?</b></p>Feel free to reach out to Casey or Allie as soon as you know you'll be
+                attending. Once you've booked your travel and know when you'll be arriving, please let us
+                know!<br /><br />
+                <p><b>Can I bring the kids?</b></p>Yes, please! We have considered kiddos in the final guestcount, and
+                will
+                provide plenty of space for everyone. Please reach out if you have special needs around your
+                kids.<br /><br />
+                <p><b>Can I bring my dogs?</b></p>Unless we indicate otherwise, please leave the pups at home.
+            </span>
+        </div>
+        <marquee direction="left" marquee scrollamount="11"><img src="pegasus.gif" width="80" />
+        </marquee><img src="doll.png" width="100"><img src="blinkiesCafe-7j.gif" width="140 px" ;></a>
+        <img id="startbtn" style="width: 70px; position:fixed; right: 10px; top: 10px" src="speakeranimated.gif">
+        <br /><a href="mailto:allie.swarr@gmail.com"><img src="maildog.gif" width="100"></a>
+        Questions? Email us!<br />
+        <br />
+    </div>
+    </p>
 
-        <img src="doll.png" width="100">
-        <img src="http://www.fillster.com/images/dividers/6y.gif">
-        <!-- <img src="https://www.fillster.com/images/dividers/150w.gif"> -->
-        <!-- Info on accomodations and logistics -->
-        <p>Accommodations</p>
-        <img
-            src="https://images.squarespace-cdn.com/content/v1/54089c91e4b007c79841169a/1563009141555-24ZXF3JP2BAN92UMFCDP/public.jpeg?format=400w">
-        <img
-            src="https://images.squarespace-cdn.com/content/v1/54089c91e4b007c79841169a/1563002585979-T5CW68OHEYHN5YUV5YKH/IMG_0211.jpeg?format=400w">
-        <img src="https://dl.glitter-graphics.com/pub/152/152179h4qroi8q2b.gif">
-
-        <!-- RVSP here (google form link) can they updates? -->
-        <p>Getting there</p>
-        <!-- How we will send out updates (text blasts) -->
-        <p>Things to do</p>
-
-        <script>
-            const startbtn = document.getElementById("startbtn");
-            const content = document.getElementById("content");
-            const loader = document.getElementById("loader");
-            const music = document.getElementById("music");
-
-            startbtn.addEventListener("click", () => {
-                music.paused ? music.play() : music.pause();
-            });
-        </script>
+    <br />
+    </div>
 
 </body>
+<script>
+    const startbtn = document.getElementById("startbtn");
+    const content = document.getElementById("content");
+    const loader = document.getElementById("loader");
+    const music = document.getElementById("music");
+
+    startbtn.addEventListener("click", () => {
+        music.paused ? music.play() : music.pause();
+    });
+</script>
 
 </html>

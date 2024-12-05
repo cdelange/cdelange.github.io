@@ -5,74 +5,45 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Come to our party!</title>
+    <title>Callie's World</title>
     <link rel="icon" type="image/x-icon" href="favicon.png">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="apple-touch-icon" sizes="128x128" href="apple-touch-icon.png">
     <style>
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #deedf6;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #4682B4;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #4169E1;
-        }
-
-        .marquee {
-            position: absolute;
-            width: 70px;
-        }
-
-        .marquee img {
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            overflow: hidden;
         }
 
-        #bird1 {
-            left: 5%;
+        .popup {
+            background: white;
+            padding: 20px;
+            border: solid black;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
         }
 
-        #bird2 {
-            left: 15%;
+        .close-btn {
+            margin-top: 15px;
+            padding: 8px 16px;
+            background: #007BFF;
+            color: white;
+            border: solid black;
+            cursor: pointer;
         }
 
-        #bird3 {
-            left: 25%;
-        }
-
-        #bird4 {
-            left: 35%;
-        }
-
-        #bird5 {
-            left: 45%;
-        }
-
-        #bird6 {
-            left: 55%;
-        }
-
-        #bird7 {
-            left: 65%;
-        }
-
-        #bird8 {
-            left: 75%;
-        }
-
-        #bird9 {
-            left: 85%;
-        }
-
-        #bird10 {
-            left: 95%;
+        .close-btn:hover {
+            background: #0056b3;
         }
 
         body,
@@ -80,20 +51,30 @@
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
-            overflow-x: hidden;
+            overflow-x: hidden !important;
+            overflow-y: hidden;
+        }
+
+        #body {
+            overflow-x: hidden !important;
+
         }
 
         body {
             background-image: url('clouds2.jpeg');
             background-repeat: repeat;
-            font-family: Times, "Times New Roman", serif;
-            cursor: url(http://www.rw-designer.com/cursor-extern.php?id=93564), url(210513.png), auto;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12px;
+            line-height: 1.4;
+            color: #000000;
+            cursor: url('http://www.rw-designer.com/cursor-extern.php?id=93564'), url('210513.png'), auto;
         }
 
         .container {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+
         }
 
         main,
@@ -101,6 +82,7 @@
             margin: 0;
             display: flex;
             justify-content: center;
+            position: relative;
         }
 
         main {
@@ -112,12 +94,13 @@
             position: fixed;
             right: 10px;
             top: 10px;
+            z-index: 999;
         }
 
         footer {
-            background: url("grass.png");
-            background-size: 100% 50px;
-            height: 50px;
+            background: url("grassblowinginwind.gif");
+            background-repeat: repeat-x;
+            height: 27px;
             width: 100%;
             display: table-row;
             overflow: hidden;
@@ -129,19 +112,23 @@
         .getting-there,
         .schedule,
         .what-to-pack,
-        .faqs {
+        .festivities,
+        .contributions,
+        .faqs,
+        .intro {
             align-self: stretch;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-left: 3%;
-            padding-right: 3%;
-            padding-bottom: 3%;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-bottom: 5%;
         }
 
         .welcome {
-            padding-top: 8%;
+            padding-top: 5%;
         }
+
 
         .central_ext,
         .central {
@@ -149,8 +136,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: #D9E7FA;
+            opacity: 100%;
             width: 100%;
+            padding-bottom: 150px;
 
         }
 
@@ -158,7 +147,24 @@
 
             .central_ext,
             .central {
-                width: 50%;
+                width: 70%;
+            }
+
+            ::-webkit-scrollbar {
+                width: 12px;
+            }
+
+            ::-webkit-scrollbar-track {
+                background: #deedf6;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #4682B4;
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #4169E1;
             }
         }
 
@@ -197,111 +203,433 @@
         @media screen and (max-width:767px) {
             iframe[src*="google.com/forms"] {
                 width: 100% !important;
-                height: 800px;
+                height: 625px;
             }
 
 
         }
 
         #horse,
-        #frog {
+        #frog,
+        #bracelet,
+        #butterfly {
             width: 100%;
         }
 
         #rsvp-form {
             width: 100%;
+            align-self: stretch;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #entry-page {
+            background-image: url('star.gif');
+            background-repeat: repeat;
+            overflow: hidden;
+        }
+
+        #enter {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #enter>img {
+            width: 30px
+        }
+
+        #nav {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: stretch;
+            width: 100%;
+        }
+
+        #nav button {
+            padding-top: 3%;
+            padding-bottom: 3%;
+            background: none;
+            border: none;
+            color: white;
+            cursor: inherit;
+            flex: 12;
+            background-color: rgb(112, 164, 249);
+        }
+
+        .rsvp-text {
+            color: rgb(89, 132, 207);
+            font-weight: bold;
+            font-size: 20px;
+            font-family: Verdana, Arial, sans-serif;
+        }
+
+        .marquee {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            background: #D9E7FA;
+            padding-bottom: 5%;
+            padding-top: 5%;
+        }
+
+        .carouselcontainer {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+            font-size: 0;
+            padding-top: 3%;
+            padding-bottom: 3%
+        }
+
+        .carousel {
+            width: max-content;
+            top: 0;
+            left: 0;
+            animation: moveSlideshow 50s linear infinite;
+        }
+
+        .carousel img {
+            display: inline-block;
+            vertical-align: middle;
+            height: 200px;
+            margin: 0;
+        }
+
+        @keyframes moveSlideshow {
+            100% {
+                transform: translateX(-4735px);
+            }
+        }
+
+        #title {
+            padding-top: 1%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        #dragon {
+            position: absolute;
+            bottom: -25px;
+            left: 41%;
+            width: 150px;
+        }
+
+        #dragonfly {
+            position: absolute;
+            bottom: 40px;
+            left: 74%;
+        }
+
+        #welcomer {
+            position: absolute;
+            bottom: -10px;
+            left: 80%;
+            width: 100px;
+        }
+
+        #knight {
+            position: absolute;
+            bottom: -25px;
+            left: 10%;
+        }
+
+        #schedule {
+            padding-bottom: 0%;
+        }
+
+        @media screen and (max-width:767px) {
+            #dragon {
+                position: absolute;
+                bottom: 50px;
+                left: 37%;
+                width: 100px;
+            }
+
+            #dragonfly {
+                position: absolute;
+                bottom: 40px;
+                left: 63%;
+            }
+
+            #welcomer {
+                position: absolute;
+                bottom: -10px;
+                left: 68%;
+                width: 100px;
+            }
+
+            #knight {
+                position: absolute;
+                bottom: -25px;
+                left: 2%;
+            }
+        }
+
+        @keyframes scrollDown {
+            0% {
+                transform: translateY(-100%);
+            }
+
+            100% {
+                transform: translateY(calc(var(--doc-height) + 100%));
+            }
+        }
+
+        .falling {
+            position: absolute;
+            width: 17px;
+            animation: scrollDown linear infinite;
+            z-index: 999;
+        }
+
+        .falling:nth-child(1) {
+            left: 54%;
+            animation-duration: 8.5s;
+        }
+
+        .falling:nth-child(2) {
+            left: 33%;
+            animation-duration: 2.5s;
+        }
+
+        .falling:nth-child(3) {
+            left: 26%;
+            animation-duration: 22s;
+        }
+
+        .falling:nth-child(4) {
+            left: 88%;
+            animation-duration: 12s;
+        }
+
+        .falling:nth-child(5) {
+            left: 39%;
+            animation-duration: 4.5s;
+        }
+
+        .falling:nth-child(6) {
+            left: 95%;
+            animation-duration: 23s;
+        }
+
+        .falling:nth-child(7) {
+            left: 8%;
+            animation-duration: 16.5s;
+        }
+
+        .falling:nth-child(8) {
+            left: 94%;
+            animation-duration: 11s;
+        }
+
+        .falling:nth-child(9) {
+            left: 8%;
+            animation-duration: 12s;
+        }
+
+        .falling:nth-child(10) {
+            left: 6%;
+            animation-duration: 22s;
+        }
+
+        .falling:nth-child(11) {
+            left: 64%;
+            animation-duration: 13.5s;
+        }
+
+        .falling:nth-child(12) {
+            left: 20%;
+            animation-duration: 6s;
+        }
+
+        .falling:nth-child(13) {
+            left: 6%;
+            animation-duration: 18.5s;
+        }
+
+        .falling:nth-child(14) {
+            left: 38%;
+            animation-duration: 13s;
+        }
+
+        .falling:nth-child(15) {
+            left: 50%;
+            animation-duration: 12s;
+        }
+
+        .falling:nth-child(16) {
+            left: 87%;
+            animation-duration: 6.5s;
+        }
+
+        .falling:nth-child(17) {
+            left: 37%;
+            animation-duration: 5.5s;
+        }
+
+        .falling:nth-child(18) {
+            left: 70%;
+            animation-duration: 22.5s;
+        }
+
+        .falling:nth-child(19) {
+            left: 16%;
+            animation-duration: 16.5s;
+        }
+
+        .falling:nth-child(20) {
+            left: 22%;
+            animation-duration: 24.5s;
         }
     </style>
 </head>
-<!-- TODO: fix marquees -->
-<!-- TODO: review existing copy -->
-<!-- TODO: add more fun stuff and any extra info/sections -->
-<!-- TODO: clean up wedding dir -->
-<!-- TODO: dial in google form -->
-<!-- TODO: place spotify link or embed -->
-<!-- TODO: fix spacings and paddings -->
-<div class="container">
-    <marquee class="marquee" id="bird1" direction="up"><img src="http://www.fillster.com/images/graphics/482k.gif">
-    </marquee>
-    <marquee class="marquee" id="bird2" direction="up"><img src="http://www.fillster.com/images/graphics/482k.gif">
-    </marquee>
-    <marquee class="marquee" id="bird3" direction="up"><img src="http://www.fillster.com/images/graphics/482k.gif">
-    </marquee>
-    <marquee class="marquee" id="bird4" direction="up"><img src="http://www.fillster.com/images/graphics/482k.gif">
-    </marquee>
-    <marquee class="marquee" id="bird5" direction="up"><img src="http://www.fillster.com/images/graphics/482k.gif">
-    </marquee>
-    <marquee class="marquee" id="bird6" direction="up"><img src="http://www.fillster.com/images/graphics/482k.gif">
-    </marquee>
-    <marquee class="marquee" id="bird7" direction="up"><img src="http://www.fillster.com/images/graphics/482k.gif">
-    </marquee>
-    <marquee class="marquee" id="bird8" direction="up"><img src="http://www.fillster.com/images/graphics/482k.gif">
-    </marquee>
-    <marquee class="marquee" id="bird9" direction="up"><img src="http://www.fillster.com/images/graphics/482k.gif">
-    </marquee>
-    <marquee class="marquee" id="bird10" direction="up"><img src="http://www.fillster.com/images/graphics/482k.gif">
-    </marquee>
-
+<div class="container" id="body">
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div id="entry-page"
+        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; color: white; display: flex; align-items: center; justify-content: center; flex-direction: column; z-index: 1000;">
+        <a onclick="enterSite()"><img src="Sparkle.gif">
+        </a>
+        <br />
+        <div id="enter" onclick="enterSite()">
+            <img src="E.gif"><img src="n.gif"><img src="t.gif"><img src="E.gif"><img src="r.gif">
+        </div>
+    </div>
     <audio id="music" src="onlytime.mp3" style="display: none;" loop></audio>
     <img class="music_button" id="music_button" src="speakeranimated.gif">
     <main>
         <div class="central">
+            <div id="title">
+                <img src="anibutterfly2.gif" width="70%">
+                <img src="caseyandallie.gif" />
+                <img src="doll.png" width="100px">
+            </div>
+
+            <div id="nav">
+                <button data-target="accomodations">Accomodations</button>
+                <button data-target="contributions">Contributions</button>
+                <button data-target="getting-there">Getting There</button>
+                <button data-target="schedule">Schedule</button>
+                <button data-target="faq">FAQs</button>
+                <button data-target="what-to-pack">What to Pack</button>
+                <button data-target="rsvp-form">RSVP</button>
+            </div>
+
             <div class="welcome">
-                <!-- You are visitor number:
-                <script type="text/javascript" src="//counter.websiteout.com/js/23/0/0/0"></script>
-                <br />
-                <img src="tumblr_c38a225a2428056fe1d333132b48e9f0_06ac0371_1280.webp" alt="Visitor Counter"> -->
-                <img src="http://www.gigaglitters.com/created/KY7fLCV8yv.gif" width="300" />
-                <img src="doll.png" width="100"><img src="blinkiesCafe-7j.gif" width="140 px" ;>
-                <p>
-                    Welcome to Casey and Allie's <s>wedding</s> marriage celebration website! We will be getting married
-                    at the courthouse in New York before we come down to y'all! We coded this page
-                    together.
-                    :') We hope you'll be able to join us in for a weekend of fun and relaxation on the Guadalupe River.
-                </p>
                 <div class="outer-frame">
                     <div class="inner-frame">
                         <img src="texas.gif">
+                        The Details
                         <p>Thursday May 29 - Monday June 2, 2025</p>
-                        <p>460 River Dr, Seguin, TX 78155</p>
+                        460 River Dr, Seguin, TX 78155
+                        <p id="countdown"><span id="timer"></span></p>
                     </div>
-                </div>
-                <!-- <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="testca.JPG" width="200px" alt="Photo 1"></div>
-                        <div class="swiper-slide"><img src="testca.JPG" width="200px" alt="Photo 2"></div>
-                        <div class="swiper-slide"><img src="testca.JPG" width="200px" alt="Photo 3"></div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-
-                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-                <script>
-                    const swiper = new Swiper('.swiper-container', {
-                        loop: true, // Allows infinite looping
-                        speed: 400, // Transition speed in milliseconds
-                        autoplay: { delay: 3000 }, // Auto-swipe every 3 seconds
-                        pagination: {
-                            el: '.swiper-pagination',
-                            clickable: true,
-                        },
-                        navigation: {
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
-                        },
-                    });
-                </script> -->
+                </div><br />
+                <p>
+                    Welcome to Casey and Allie's marriage celebration website! We'll already be married in New York,
+                    but we hope you'll join us for a celebration of our love in Texas,
+                    where it all began.
+                </p>
+                <br /><br />
                 <a onclick="rsvp()">
                     <img src="book1.gif">
                 </a>
-                <marquee>Ready to RSVP? Click the book!</marquee>
-                <img src="tour2.gif" id="tour">
-            </div>
+                <marquee class="rsvp-text">Ready to RSVP? Click the book!</marquee>
+                <br /><br />
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p style="margin-right: 20px; margin-left: 5px; flex: 1;">Also, we coded this website together!
+                        It's
+                        a testament to Casey's expertise in web development and Allie's love of wizards, unicorns,
+                        and
+                        the early internet. It's been a fun project for us to work on, and we hope you like it! Try
+                        clicking around – you may find some surprises. ;)
+                    </p>
+                    <img src="wizard_raisehands_sm_clr.gif" alt="Easter Egg" style="max-width: 50%; padding-right: 20px;
+                        height: auto;cursor: pointer; " onclick="showPopup()">
 
-            <div class="accomodations">
-                <img src="http://www.gigaglitters.com/created/KbbOZZaSQw.gif" width="300" height="48" /></a>
+                    <!-- Popup Overlay -->
+                    <div class="overlay" id="popupOverlay">
+                        <div class="popup">
+                            <h2>Tell us your secrets</h2>
+                            <!-- Embed the yellbox -->
+                            <script src="https://yellbox.com/yellbox.js?name=aandc"></script>
+                            <button class="close-btn" onclick="closePopup()">Close</button>
+                        </div>
+                    </div>
+                </div><img src="chain.webp" width="600px">
+            </div>
+            <div class="carouselcontainer">
+                <div class="carousel">
+                    <img src="c1.jpeg">
+                    <img src="c2.jpeg">
+                    <img src="c3.jpeg">
+                    <img src="c4.jpeg">
+                    <img src="c5.jpeg">
+                    <img src="c6.jpeg">
+                    <img src="c7.jpeg">
+                    <img src="c8.jpeg">
+                    <img src="c9.jpeg">
+                    <img src="c10.jpeg">
+                    <img src="c11.jpeg">
+                    <img src="c12.jpeg">
+                    <img src="c13.jpeg">
+                    <img src="c14.jpeg">
+                    <img src="c15.jpeg">
+                    <img src="c16.jpeg">
+                    <img src="c17.jpeg">
+                    <img src="c18.png">
+                    <img src="c19.jpeg">
+                    <img src="c21.jpg">
+                    <img src="c22.jpg">
+                    <img src="c23.jpg">
+                    <img src="c24.jpg">
+                    <img src="c25.jpg">
+                    <img src="c26.png">
+                    <img src="c27.png">
+                    <img src="c28.png">
+                    <img src="c29.png">
+                    <img src="c30.png">
+                    <img src="c31.png">
+                    <img src="c8.jpeg">
+                    <img src="c14.jpeg">
+                    <img src="c19.jpeg">
+                    <img src="c10.jpeg">
+                    <img src="c23.jpg">
+                    <img src="c4.jpeg">
+                </div>
+            </div>
+            <img src="castle.gif" />
+            <div class="accomodations" id="accomodations">
+                <img src="http://www.gigaglitters.com/created/KbbOZZaSQw.gif" width="300" height="48" />
+                <p>We will have three houses</p>
+
+
+
                 <p>
                     Most guests will be joining us at The River Haven, an 11-bedroom home right on the
                     Guadalupe River.
@@ -313,74 +641,148 @@
                         for everyone.</li>
                     <li>Direct private river access to kayak,
                         fish, and swim.</li>
-                    <li>Huge shaded yard for outdoor games and relaxing
-                        under the 120+ year old pecan shade trees.</li>
-                    <li>Large fire pit: For evening s’mores and stories
+                    <li>Huge yard shaded by 120+ year-old pecan trees, perfect for outdoor games and relaxing.</li>
+                    <li>Large fire pit for evening s’mores and stories
                         under the stars.</li>
                 </ul>
-
                 <a target="_blank" href="https://www.theriverhaven.com/">
-                    <img src="blinkiesCafe-RA.gif" width="175px">
-                </a>
+                    <img src="blinkiesCafe-RA.gif" width="200px"><br /><br />
+                </a><img src="tour2.gif" width="80%">
+                <br />
+                <div>
+                    <p>
+                        Casey and Allie's family will be staying at seperate river-side cabins just five minutes around
+                        the
+                        corner.
+                        Our intention is that everyone gathers at River Haven each day for all day river time, meals,
+                        and
+                        hangs.
+                    </p>
+                    <img src="housesetup.png" style="max-width: 30%; padding-right: 20px; height: auto;">
+                </div>
+                <div style="text-align: left; margin: 10px 0px;">
+                    <div style="float: left; margin: 0px 60px 3px 0px;"><img src="noymenai-modified.png" width="180">
+                    </div>
+                    <p>
+                    <h2>Food</h2>
+                    This is Mrs. Noymenia Lewis, San Antonio-based chef who will be on-site providing breakfast, lunch,
+                    and dinner for
+                    all
+                    three
+                    houses from Friday to Sunday. Don't miss meal times! See the schedule section for more info.</p>
+                </div>
             </div>
+            <img src="butterfly.gif" id="butterfly" style="width: 100%;">
+            <div class="contributions">
+                <img src="butterflygrass.gif">
+                <img src="contributions.gif" id="contributions">
+                <br />
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p style="margin-right: 20px; margin-left: 5px; flex: 1;">
+                        To make this weekend comfortable for everyone, we’re asking for $200 per adult to help
+                        us cover the cost of our riverside lodging, a private chef, a catered
+                        crawfish boil, snacks, and drinks for the weekend. Your contribution allows us to enjoy a
+                        relaxed,
+                        all-inclusive weekend together!<br /><br />
 
+                        <b>Payment Options:</b><br /><br />
+
+                        • Venmo: @caseydelange<br />
+                        • Zelle: (832)-585-6028<br /><br />
+
+                        Thank you so much for helping make this a memorable weekend! If you have any questions,
+                        please don’t hesitate to reach out.
+                    </p><a href="https://www.youtube.com/watch?v=k9OqZ79FWx0" target="_blank">
+                        <img src="dolphin2.gif" width="175px"
+                            style="max-width: 70%; padding-right: 10px; height: auto;"></a>
+                </div>
+            </div>
+            <div class="festivities" id="festivities">
+                <img src="festivities.gif">
+                <br />
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p style="margin-right: 20px; margin-left: 5px; flex: 1;">
+                        This weekend is all about unwinding and connecting. Float the river, fish, kayak, or cozy up
+                        by
+                        the
+                        fire. We’ll share more about the fun programming we have planned — like yard games, family
+                        activities, and (maybe) a talent show — as the date approaches! We're going to get really
+                        silly.<br /><br /> We don't plan on having a traditional ceremony – we just want to spend time
+                        with
+                        you!
+                    </p>
+                    <img src="skipit.gif" width="150px" style="max-width: 50%; padding-right: 20px; height: auto;">
+                </div>
+            </div>
             <marquee behavior="scroll" direction="right" id="horse">
-                <img src="runningunicorn.gif" width="175" />
+                <a href="https://www.youtube.com/watch?v=vmd1qMN5Yo0" target="_blank"><img src="runningunicorn.gif"
+                        width="175" /></a>
             </marquee>
-
-            <div class="getting-there">
+            <div class="getting-there" id="getting-there">
                 <img src="http://www.gigaglitters.com/created/UetwMgEVFu.gif" />
-                <p>
-                    Fly in to San Antonio or Austin airport. River Haven is about 45
-                    minutes outside of town. We'll coordinate
-                    pickups and/or Ubers closer
-                    to the event.
+                <p>The home is located in the Seguin/McQueeney, TX area right on the Guadalupe River. <br />For those
+                    flying in, we suggest either the San Antonio or Austin
+                    Airports.
                 </p>
 
-            </div>
+                <ul>
+                    <li>12 minutes from New Braunfels</li>
 
-            <div class="schedule">
-                <img src="butterfly.gif" id="butterfly">
+                    <li>35 minutes from San Antonio</li>
+
+                    <li>55 minutes from Austin</li>
+
+                    <li>2 hours from Houston</li><br />
+                    </p>
+
+            </div>
+            <marquee direction="left" scrollamount="5"><img src="dolphin3.gif" /></marquee>
+            <br />
+            <div class="schedule" id="schedule">
                 <img src="http://www.gigaglitters.com/created/jUzuGCMus3.gif" />
                 <div style="text-align: left; margin: 10px 0px;">
                     <div style="float: left; margin: 0px 60px 3px 0px;"><img
-                            src="https://dl.glitter-graphics.com/pub/2790/2790150kojf00v1al.gif" width="180"></div>
-                    <p>
-                        <b>Wednesday, May 28:</b> Casey and Allie will be at the house getting everything
-                        ready for
-                        the
-                        celebration.
-                        Feel free to arrive early and lend a hand with the preparations!
-                    </p>
-                    <p>
-                        <b>Thursday May 29:</b> Most guests are expected to arrive today. We’ll kick off the
-                        festivities
-                        with
-                        dinner
-                        and a toast around the bonfire.
-                    </p>
-                    <p>
-                        <b>Friday May 30: </b> River day! Spend the day enjoying the water.
-                    </p>
-                    <p>
-                        <b>Saturday May 31:</b> It's party time! We'll be hosting a big catered crawfish
-                        boil,
-                        complete
-                        with all
-                        the
-                        fixings. Come hungry!
-                    </p>
-                    <p>
-                        <b>Sunday June 1:</b> A day to relax and unwind. Swim, fish, or even explore New
-                        Braunfels.
-                    </p>
-                    <p>
-                        <b>Monday June 2:</b> Time to head home! </a>
-                    </p>
+                            src="https://dl.glitter-graphics.com/pub/2790/2790150kojf00v1al.gif" width="180">
+                    </div>
+                    <h3>Wednesday, May 28</h3>
+                    <p>The house is open for arrivals at 4 PM! Casey and Allie will be at the house getting everything
+                        ready.
+                        You’re
+                        welcome
+                        to arrive today!</p>
+
+                    <h3>Thursday, May 29</h3>
+                    <p>Most guests are expected to arrive today– but if you'd like to come later in the weekend, that's
+                        fine too! Guests will check in and settle into their rooms, and we'll have welcome drinks,
+                        snacks, and a party by the riverfront for introductions. We'll end the night with s'mores by the
+                        bonfire.</p>
+
+                    <h3>Friday, May 30 – River Day!</h3>
+                    <p>Spend the day enjoying the water! Kayak, canoe, fish, swim, read a book, whatever you desire.</p>
+
+                    <h3>Saturday, May 31 – Celebration Day!</h3>
+                    <p>It’s party time! We’ll be hosting a catered crawfish boil by the river with yard games.</p>
+                    <p>Crawfish boil: 2 PM</p>
+                    <p>We'll finish with a Sardines tournament.</p>
+
+                    <h3>Sunday, June 1 – Relax and Unwind</h3>
+                    <p>A day to enjoy some downtime. Swim, fish, or explore New Braunfels.</p>
+
+                    <h3>Monday, June 2</h3>
+                    <p>Time to head home after a memorable weekend!</p>
+                    <p><em>Food on your own</em></p>
                 </div>
             </div>
+            <marquee class="rsvp-text">Meals are at 10 AM, 12 PM, and 7 PM at the River Haven house!</marquee>
+            <br />
+            <br />
+            <br />
+            <br />
 
-            <div class="what-to-pack">
+            <img id="train" src="train.gif" style="width: 100%;">
+            <div class="what-to-pack" id="what-to-pack">
+                <br />
+                <br />
                 <img src="http://www.gigaglitters.com/created/a7efGTp91x.gif" />
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <p style="margin-right: 20px; margin-left: 5px; flex: 1;">
@@ -392,14 +794,12 @@
                         <li>If you're local, consider bringing a fold-up lawn chair!</li>
                     </ul>
                     </p>
-                    <img src="6zfzzzry39ma1.gif" width="150px" alt="Image description"
+                    <img src="6zfzzzry39ma1.gif" width="150px"
                         style="max-width: 50%; padding-right: 20px; height: auto;">
                 </div>
             </div>
-
             <marquee id="frog" direction="left" scrollamount="5"><img src="frog.gif" /></marquee>
-
-            <div class="faqs">
+            <div class="faqs" id="faq">
                 <img src="http://www.gigaglitters.com/created/tFpQ3N5RgY.gif" />
                 <div style="height: 100%; text-align: left; margin: 10px 0px;">
                     <p><b>Is this a wedding?</b></p>No! We're thinking of this as a friends
@@ -414,13 +814,13 @@
                     the
                     cost
                     of
-                    the house and catering.
-                    <img src="web_anim_brook_26501.gif" width="150" align="left" hspace="10" vspace="3" />
-                    <p><b>How do I RSVP?</b></p>Click the fish to open our RSVP form. As soon as you have
-                    flight
-                    or
-                    arrival information, please reach out to either Casey or Allie and give us a heads up.
+                    the house and catering. Please see "Contributions" section for more information.
+                    <img src="trout.gif" width="150" align="left" hspace="10" vspace="3" />
                     <br clear="left" />
+
+                    <p><b>Is there a dress code?</b></p>No dress code! Wear whatever is most comfortable (and
+                    can bear
+                    some crawfish stains!)
 
                     <p><b>Where am I going to sleep?</b></p>We have loosely assigned beds, and will send out
                     floorplans
@@ -433,59 +833,113 @@
                     and
                     quiet
                     space. Please reach out if you have special needs around your
-                    kids.<img src="heart3.gif" width="120" align="right" hspace="10" vspace="3" />
+                    kids.<a href="https://open.spotify.com/playlist/2cJGqb5vfkckqq1STXUosE?si=dbeafbf9db9c426b"
+                        target="_blank" style="cursor: pointer;">
 
-                    <p><b>Can I bring my dogs?</b></p>Unless we indicate otherwise, please leave the pups at
+                        <img src="heart3.gif" width="120" align="right" hspace="10" vspace="3" />
+                    </a>
+
+                    <p><b>Can I bring my dogs?</b></p>All BnBs are pet-free. Unless we indicate otherwise, please leave
+                    the pups at
                     home.
                 </div>
             </div>
 
             <div id="rsvp-form">
+                <img src="cowboybaby.gif" width="150" />
                 <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSfEw-6aaYEMpZqD-AzjwdLmQGLjuIYpX8jyTvgv9aDQyy4-SQ/viewform?embedded=true"
-                    width="100%" height="700px" frameborder="0" marginheight="0" marginwidth="0">
+                    width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0">
                 </iframe>
             </div>
 
-            <a href="mailto:allie.swarr@gmail.com"><img src="maildog.gif" width="100"></a>
             <p>
                 Questions? Email or text either of us!
             </p>
 
-            <!-- maybe a retro gif with a link to our spotify playlist instead of this   -->
-            <!-- <iframe style="border-radius:12px"
-                src="https://open.spotify.com/embed/playlist/3otRUfS537NMcti6mQTesa?utm_source=generator&theme=0"
-                width="80%" height="152" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"></iframe> -->
+            <div style="display:flex; align-items: center; padding-bottom: 8%;">
+                <span style="padding-right: 5px;">
+                    You are visitor number
+                </span>
+                <script type=" text/javascript" src="//counter.websiteout.com/js/13/0/0/0"></script>
+            </div>
         </div>
+        <img id="dragon" src="dragon001.gif">
+        <img id="dragonfly" src="dragonfly.gif">
+        <img id="welcomer" src="welcomer.gif">
+        <img id="knight" src="2-two-knights-fighting.gif">
     </main>
-
     <footer>
         <div class="central_ext"></div>
     </footer>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
-<!-- function enterSite() {
-document.getElementById('entry-page').style.display = 'none';
-} -->
-<script>
-    const startbtn = document.getElementById("music_button");
-    const music = document.getElementById("music");
-    startbtn.addEventListener("click", () => {
-        music.paused ? music.play() : music.pause();
-    });
-    const rsvp = () => document.getElementById('rsvp-form').scrollIntoView();
-</script>
-<script>
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-    document.querySelectorAll('.marquee').forEach(marquee => {
-        marquee.scrollAmount = getRandomInt(1, 3);  // Random scroll speed between 3 and 6
-        marquee.scrollDelay = getRandomInt(1, 50); // Random delay between 15 and 50
-        marquee.style.height = `${document.documentElement.scrollHeight}px`;
-    });
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const docHeight = Math.max(
+                document.body.scrollHeight,
+                document.body.offsetHeight,
+                document.documentElement.clientHeight,
+                document.documentElement.scrollHeight,
+                document.documentElement.offsetHeight
+            );
+            document.documentElement.style.setProperty('--doc-height', `${docHeight}px`);
+        });
+        const startbtn = document.getElementById("music_button");
+        const music = document.getElementById("music");
+        startbtn.addEventListener("click", () => {
+            if (music.paused) {
+                music.play();
+                startbtn.src = "speakeranimated.gif";
+            } else {
+                music.pause();
+                startbtn.src = "speakerstill.jpg";
+            }
+        });
+        const navButtons = document.querySelectorAll("#nav button");
+
+        navButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const targetId = button.getAttribute("data-target");
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        });
+
+        function updateCountdown() {
+            const targetDate = new Date("May 29, 2025 00:00:00").getTime();
+            const now = new Date().getTime();
+            const timeRemaining = targetDate - now;
+
+            if (timeRemaining > 0) {
+                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+                document.getElementById("timer").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                document.getElementById("timer").textContent = "It's Time!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+
+        const rsvp = () => document.getElementById("rsvp-form").scrollIntoView();
+        function enterSite() {
+            document.documentElement.style.overflow = 'scroll';
+            document.getElementById("entry-page").style.display = "none";
+            music.play()
+        }
+
+        function showPopup() {
+            document.getElementById("popupOverlay").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popupOverlay").style.display = "none";
+        }
+    </script>
 
 </html>

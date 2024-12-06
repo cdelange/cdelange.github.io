@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+<script>
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+</script>
 
 <head>
     <meta charset="UTF-8">
@@ -67,7 +73,7 @@
             font-size: 12px;
             line-height: 1.4;
             color: #000000;
-            cursor: url('http://www.rw-designer.com/cursor-extern.php?id=93564'), url('210513.png'), auto;
+            cursor: url('210513.png'), auto;
         }
 
         .container {
@@ -166,6 +172,11 @@
             ::-webkit-scrollbar-thumb:hover {
                 background: #4169E1;
             }
+
+            #dolphin-c {
+                gap: 10px;
+            }
+
         }
 
         .central_ext {
@@ -199,6 +210,11 @@
             border: 5px solid #4169E1;
         }
 
+        #housesetup {
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+        }
 
         @media screen and (max-width:767px) {
             iframe[src*="google.com/forms"] {
@@ -206,6 +222,18 @@
                 height: 625px;
             }
 
+            #noymenia {
+                width: 100px;
+                height: 100px;
+            }
+
+            #tour {
+                width: 90%;
+            }
+
+            #housesetup {
+                width: 90%;
+            }
 
         }
 
@@ -246,6 +274,7 @@
             flex-direction: row;
             align-items: stretch;
             width: 100%;
+            background-color: rgb(112, 164, 249);
         }
 
         #nav button {
@@ -255,8 +284,6 @@
             border: none;
             color: white;
             cursor: inherit;
-            flex: 12;
-            background-color: rgb(112, 164, 249);
         }
 
         .rsvp-text {
@@ -289,7 +316,7 @@
             width: max-content;
             top: 0;
             left: 0;
-            animation: moveSlideshow 50s linear infinite;
+            animation: moveSlideshow 80s linear infinite;
         }
 
         .carousel img {
@@ -344,7 +371,17 @@
             padding-bottom: 0%;
         }
 
+        #dolphin-c {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
         @media screen and (max-width:767px) {
+            #dolphin-c {
+                flex-direction: column;
+                align-items: center;
+            }
+
             #dragon {
                 position: absolute;
                 bottom: 50px;
@@ -391,106 +428,166 @@
 
         .falling:nth-child(1) {
             left: 54%;
-            animation-duration: 8.5s;
+            animation-duration: 42.5s;
         }
 
         .falling:nth-child(2) {
             left: 33%;
-            animation-duration: 2.5s;
+            animation-duration: 12.5s;
         }
 
         .falling:nth-child(3) {
             left: 26%;
-            animation-duration: 22s;
+            animation-duration: 110s;
         }
 
         .falling:nth-child(4) {
             left: 88%;
-            animation-duration: 12s;
+            animation-duration: 60s;
         }
 
         .falling:nth-child(5) {
             left: 39%;
-            animation-duration: 4.5s;
+            animation-duration: 22.5s;
         }
 
         .falling:nth-child(6) {
             left: 95%;
-            animation-duration: 23s;
+            animation-duration: 115s;
         }
 
         .falling:nth-child(7) {
             left: 8%;
-            animation-duration: 16.5s;
+            animation-duration: 82.5s;
         }
 
         .falling:nth-child(8) {
             left: 94%;
-            animation-duration: 11s;
+            animation-duration: 55s;
         }
 
         .falling:nth-child(9) {
             left: 8%;
-            animation-duration: 12s;
+            animation-duration: 60s;
         }
 
         .falling:nth-child(10) {
             left: 6%;
-            animation-duration: 22s;
+            animation-duration: 110s;
         }
 
         .falling:nth-child(11) {
             left: 64%;
-            animation-duration: 13.5s;
+            animation-duration: 67.5s;
         }
 
         .falling:nth-child(12) {
             left: 20%;
-            animation-duration: 6s;
+            animation-duration: 30s;
         }
 
         .falling:nth-child(13) {
             left: 6%;
-            animation-duration: 18.5s;
+            animation-duration: 92.5s;
         }
 
         .falling:nth-child(14) {
             left: 38%;
-            animation-duration: 13s;
+            animation-duration: 65s;
         }
 
         .falling:nth-child(15) {
             left: 50%;
-            animation-duration: 12s;
+            animation-duration: 60s;
         }
 
         .falling:nth-child(16) {
             left: 87%;
-            animation-duration: 6.5s;
+            animation-duration: 32.5s;
         }
 
         .falling:nth-child(17) {
             left: 37%;
-            animation-duration: 5.5s;
+            animation-duration: 27.5s;
         }
 
         .falling:nth-child(18) {
             left: 70%;
-            animation-duration: 22.5s;
+            animation-duration: 112.5s;
         }
 
         .falling:nth-child(19) {
             left: 16%;
-            animation-duration: 16.5s;
+            animation-duration: 82.5s;
         }
 
         .falling:nth-child(20) {
             left: 22%;
-            animation-duration: 24.5s;
+            animation-duration: 122.5s;
+        }
+
+        .falling:nth-child(21) {
+            left: 15%;
+            animation-duration: 50s;
+        }
+
+        .falling:nth-child(22) {
+            left: 47%;
+            animation-duration: 25s;
+        }
+
+        .falling:nth-child(23) {
+            left: 29%;
+            animation-duration: 100s;
+        }
+
+        .falling:nth-child(24) {
+            left: 74%;
+            animation-duration: 15s;
+        }
+
+        .falling:nth-child(25) {
+            left: 90%;
+            animation-duration: 75s;
+        }
+
+        .falling:nth-child(26) {
+            left: 11%;
+            animation-duration: 38s;
+        }
+
+        .falling:nth-child(27) {
+            left: 66%;
+            animation-duration: 90s;
+        }
+
+        .falling:nth-child(28) {
+            left: 25%;
+            animation-duration: 45s;
+        }
+
+        .falling:nth-child(29) {
+            left: 83%;
+            animation-duration: 20s;
+        }
+
+        .falling:nth-child(30) {
+            left: 41%;
+            animation-duration: 65s;
         }
     </style>
 </head>
 <div class="container" id="body">
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
+    <div class="falling"><img src="fallingheart.gif"></div>
     <div class="falling"><img src="fallingheart.gif"></div>
     <div class="falling"><img src="fallingheart.gif"></div>
     <div class="falling"><img src="fallingheart.gif"></div>
@@ -527,7 +624,13 @@
             <div id="title">
                 <img src="anibutterfly2.gif" width="70%">
                 <img src="caseyandallie.gif" />
-                <img src="doll.png" width="100px">
+                <div style="display: flex;align-items: center;gap:10px;">
+                    <img src="cherub.gif" width="45px">
+                    <img src="doll.png" width="100px">
+                    <img src="cherub.gif"
+                        style="-moz-transform: scale(-1, 1);-o-transform: scale(-1, 1);-webkit-transform: scale(-1, 1);transform: scale(-1, 1);"
+                        width="45px">
+                </div>
             </div>
 
             <div id="nav">
@@ -535,16 +638,15 @@
                 <button data-target="contributions">Contributions</button>
                 <button data-target="getting-there">Getting There</button>
                 <button data-target="schedule">Schedule</button>
-                <button data-target="faq">FAQs</button>
                 <button data-target="what-to-pack">What to Pack</button>
+                <button data-target="faq">FAQs</button>
                 <button data-target="rsvp-form">RSVP</button>
             </div>
 
             <div class="welcome">
                 <div class="outer-frame">
                     <div class="inner-frame">
-                        <img src="texas.gif">
-                        The Details
+                        <img src="roses.gif" width="100">
                         <p>Thursday May 29 - Monday June 2, 2025</p>
                         460 River Dr, Seguin, TX 78155
                         <p id="countdown"><span id="timer"></span></p>
@@ -559,7 +661,7 @@
                 <a onclick="rsvp()">
                     <img src="book1.gif">
                 </a>
-                <marquee class="rsvp-text">Ready to RSVP? Click the book!</marquee>
+                <marquee width="100%" class="rsvp-text">Ready to RSVP? Click the book!</marquee>
                 <br /><br />
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <p style="margin-right: 20px; margin-left: 5px; flex: 1;">Also, we coded this website together!
@@ -572,11 +674,9 @@
                     <img src="wizard_raisehands_sm_clr.gif" alt="Easter Egg" style="max-width: 50%; padding-right: 20px;
                         height: auto;cursor: pointer; " onclick="showPopup()">
 
-                    <!-- Popup Overlay -->
                     <div class="overlay" id="popupOverlay">
                         <div class="popup">
                             <h2>Tell us your secrets</h2>
-                            <!-- Embed the yellbox -->
                             <script src="https://yellbox.com/yellbox.js?name=aandc"></script>
                             <button class="close-btn" onclick="closePopup()">Close</button>
                         </div>
@@ -623,95 +723,83 @@
                     <img src="c4.jpeg">
                 </div>
             </div>
-            <img src="castle.gif" />
+            <a class="link" href="https://open.spotify.com/playlist/2cJGqb5vfkckqq1STXUosE?si=dbeafbf9db9c426b"
+                target="_blank" style="cursor: pointer;">
+                <img src="castle.gif" />
+            </a>
             <div class="accomodations" id="accomodations">
-                <img src="http://www.gigaglitters.com/created/KbbOZZaSQw.gif" width="300" height="48" />
-                <p>We will have three houses</p>
-
-
-
+                <img src="acc.gif" width="300" />
                 <p>
-                    Most guests will be joining us at The River Haven, an 11-bedroom home right on the
-                    Guadalupe River.
-                    Here
-                    are some highlights of the property:
-                </p>
-                <ul>
-                    <li>11 bedrooms, 5.5 bathrooms, 3 kitchens: Plenty of space
-                        for everyone.</li>
-                    <li>Direct private river access to kayak,
-                        fish, and swim.</li>
-                    <li>Huge yard shaded by 120+ year-old pecan trees, perfect for outdoor games and relaxing.</li>
-                    <li>Large fire pit for evening s’mores and stories
-                        under the stars.</li>
-                </ul>
-                <a target="_blank" href="https://www.theriverhaven.com/">
-                    <img src="blinkiesCafe-RA.gif" width="200px"><br /><br />
-                </a><img src="tour2.gif" width="80%">
+                    We’ll have three houses located close to each other along the Guadalupe River. The main house, River
+                    Haven, will be our central gathering spot each day for meals, river time, and hanging out.
+                    Additional folks will each stay in their own riverside cabins, just a short 10-minute walk down the
+                    road.
+                </p><br /><img id="tour" src="tour2.gif" width="60%">
+
                 <br />
-                <div>
-                    <p>
-                        Casey and Allie's family will be staying at seperate river-side cabins just five minutes around
-                        the
-                        corner.
-                        Our intention is that everyone gathers at River Haven each day for all day river time, meals,
-                        and
-                        hangs.
-                    </p>
-                    <img src="housesetup.png" style="max-width: 30%; padding-right: 20px; height: auto;">
-                </div>
-                <div style="text-align: left; margin: 10px 0px;">
-                    <div style="float: left; margin: 0px 60px 3px 0px;"><img src="noymenai-modified.png" width="180">
-                    </div>
-                    <p>
-                    <h2>Food</h2>
-                    This is Mrs. Noymenia Lewis, San Antonio-based chef who will be on-site providing breakfast, lunch,
-                    and dinner for
-                    all
-                    three
-                    houses from Friday to Sunday. Don't miss meal times! See the schedule section for more info.</p>
-                </div>
+                <ul>
+                    <li>
+                        <b>The Main House</b>
+                        <div style="display: flex;">
+                            <div style="display: flex; flex-direction: column;    align-items: center;">
+                                <br />River Haven will be the hub for the weekend, where everyone will gather for meals
+                                and
+                                quality
+                                time.
+                                We’re thrilled to have Mrs. Noymenia Lewis, a San Antonio-based chef, on-site to provide
+                                breakfast, lunch, and dinner for all three houses from Friday to Sunday.
+                                <a style="padding-top: 10px;" target="_blank" href="https://www.theriverhaven.com/">
+                                    <img src="blinkiesCafe-RA.gif" width="200px"></a>
+                                <br />
+                            </div>
+                            <img style="flex-grow: 1;" id="noymenia" src="noymenia.png" width="150" height="150" />
+                        </div>
+                    </li>
+                    <img src="mush.gif" width="125">
+                    <li><b>Family Cabins</b>
+                        <br /><br />Casey’s Family Cabin
+                        <br />
+                        Nestled along the Guadalupe River, this beautiful 3-bedroom, 2-bath cottage is about a
+                        10-minute
+                        walk from River Haven.
+                        <br />
+                        <br />Allie’s Family Cabin
+                        <br />A charming, country-style home is located just down the road from River Haven, with
+                        3 bedrooms, 3 baths, and waterfront access.
+                    </li>
+                    <br />
+                </ul>
+                <img id="housesetup" src="housesetup.png">
             </div>
-            <img src="butterfly.gif" id="butterfly" style="width: 100%;">
+            <!-- <img src="butterfly.gif" id="butterfly" style="width: 70%;"> -->
+            <img src="butterflygrass.gif">
+            <marquee id="frog" direction="left" scrollamount="1"><img src="snail.gif" /></marquee>
             <div class="contributions">
-                <img src="butterflygrass.gif">
+
                 <img src="contributions.gif" id="contributions">
                 <br />
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <p style="margin-right: 20px; margin-left: 5px; flex: 1;">
-                        To make this weekend comfortable for everyone, we’re asking for $200 per adult to help
-                        us cover the cost of our riverside lodging, a private chef, a catered
-                        crawfish boil, snacks, and drinks for the weekend. Your contribution allows us to enjoy a
-                        relaxed,
-                        all-inclusive weekend together!<br /><br />
-
-                        <b>Payment Options:</b><br /><br />
-
-                        • Venmo: @caseydelange<br />
-                        • Zelle: (832)-585-6028<br /><br />
-
-                        Thank you so much for helping make this a memorable weekend! If you have any questions,
-                        please don’t hesitate to reach out.
-                    </p><a href="https://www.youtube.com/watch?v=k9OqZ79FWx0" target="_blank">
-                        <img src="dolphin2.gif" width="175px"
-                            style="max-width: 70%; padding-right: 10px; height: auto;"></a>
-                </div>
-            </div>
-            <div class="festivities" id="festivities">
-                <img src="festivities.gif">
-                <br />
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <p style="margin-right: 20px; margin-left: 5px; flex: 1;">
-                        This weekend is all about unwinding and connecting. Float the river, fish, kayak, or cozy up
-                        by
-                        the
-                        fire. We’ll share more about the fun programming we have planned — like yard games, family
-                        activities, and (maybe) a talent show — as the date approaches! We're going to get really
-                        silly.<br /><br /> We don't plan on having a traditional ceremony – we just want to spend time
-                        with
-                        you!
+                <div style="display: flex; flex-direction:column; justify-content: space-between; align-items: center;">
+                    <p>
+                        Please no gifts! To make this weekend comfortable for everyone, we’re asking for $200 per adult
+                        to help
+                        us cover the cost of lodging, all meals, a catered
+                        crawfish boil on Saturday, snacks, and drinks for the weekend. Your contribution allows us to
+                        enjoy an all-inclusive, carefree weekend together!
                     </p>
-                    <img src="skipit.gif" width="150px" style="max-width: 50%; padding-right: 20px; height: auto;">
+                    <div id="dolphin-c">
+                        <a class="link" style="flex-grow: 1;" href="https://www.youtube.com/watch?v=k9OqZ79FWx0"
+                            target="_blank">
+                            <img src="dolphin2.gif" width="125px" />
+                        </a>
+                        <br />
+                        <p>
+                            <b>Payment Options:</b><br /><br />
+                            • Venmo: @Casey-DeLange<br />
+                            • Zelle: (713)-264-2484<br /><br />
+
+                            Thank you so much for helping make this a memorable weekend!
+                        </p>
+                    </div>
                 </div>
             </div>
             <marquee behavior="scroll" direction="right" id="horse">
@@ -719,79 +807,90 @@
                         width="175" /></a>
             </marquee>
             <div class="getting-there" id="getting-there">
-                <img src="http://www.gigaglitters.com/created/UetwMgEVFu.gif" />
-                <p>The home is located in the Seguin/McQueeney, TX area right on the Guadalupe River. <br />For those
+                <img src="getting.gif" />
+                <p>The houses are located in the Seguin/McQueeney, TX area right on the Guadalupe River. <br />For those
                     flying in, we suggest either the San Antonio or Austin
                     Airports.
                 </p>
 
                 <ul>
                     <li>12 minutes from New Braunfels</li>
-
                     <li>35 minutes from San Antonio</li>
-
                     <li>55 minutes from Austin</li>
-
                     <li>2 hours from Houston</li><br />
-                    </p>
+                </ul>
 
             </div>
-            <marquee direction="left" scrollamount="5"><img src="dolphin3.gif" /></marquee>
+            <marquee style="width: 100%;" direction="left" scrollamount="5"><img src="dolphin3.gif" /></marquee>
             <br />
             <div class="schedule" id="schedule">
-                <img src="http://www.gigaglitters.com/created/jUzuGCMus3.gif" />
+                <img src="schedule.gif" />
                 <div style="text-align: left; margin: 10px 0px;">
-                    <div style="float: left; margin: 0px 60px 3px 0px;"><img
-                            src="https://dl.glitter-graphics.com/pub/2790/2790150kojf00v1al.gif" width="180">
+                    <div style="float: left; margin: 0px 60px 3px 0px;"><img src="dragonglitter.gif" width="180">
+                    </div><br />This weekend is all about unwinding, connecting, and having fun! Float the river, fish,
+                    kayak, or cozy up by the fire. We’re also planning some light-hearted programming to make the
+                    weekend even more silly (like yard games and maybe! a talent show) and plan to update this section
+                    as we finalize more details. Check back closer to the date for the full lineup of
+                    activities.
+                    <br />(If you have a good idea, don't keep it to yourself)<br /><br />
+                    We are not planning a traditional ceremony, but we may have a few lovey-dovey surprises sprinkled
+                    throughout the weekend.
+                    <br /><br />
+                    <b>Wednesday, May 28</b>
+                    <p>
+                        Casey and Allie will be at the house starting around 4pm to start setting up for the weekend.
+                        You’re welcome to
+                        arrive this evening, but we may put you to work. :P
+                    </p>
+
+                    <b>Thursday, May 29</b>
+                    <p>
+                        Most guests are expected to arrive today– but if you'd like to come later in the weekend, that's
+                        fine too! You will settle into their rooms and we'll have welcome drinks,
+                        snacks, dinner, and a party by the riverfront for introductions.
+                    </p>
+
+                    <b>Friday, May 30</b>
+                    <p>Spend the day enjoying the water! Kayak, canoe, fish, swim, read a book, whatever you desire. We
+                        will provide breakfast, lunch, and dinner.</p>
+
+                    <b>Saturday, May 31 – Celebration Day!</b>
+                    <div style="display: flex;align-items: flex-end;">
+                        <span>
+                            <p>It’s party time! We’ll be hosting a catered crawfish boil lunch by the river with yard
+                                games.
+                                We
+                                will provide breakfast and dinner as well.</p>
+                            <p>Crawfish boil: 2 PMish?</p>
+                        </span>
+                        <img src="gator.gif" width="75" height="75" />
                     </div>
-                    <h3>Wednesday, May 28</h3>
-                    <p>The house is open for arrivals at 4 PM! Casey and Allie will be at the house getting everything
-                        ready.
-                        You’re
-                        welcome
-                        to arrive today!</p>
 
-                    <h3>Thursday, May 29</h3>
-                    <p>Most guests are expected to arrive today– but if you'd like to come later in the weekend, that's
-                        fine too! Guests will check in and settle into their rooms, and we'll have welcome drinks,
-                        snacks, and a party by the riverfront for introductions. We'll end the night with s'mores by the
-                        bonfire.</p>
+                    <b>Sunday, June 1</b>
+                    <p>Enjoy some downtime with friends and family. We will provide breakfast,
+                        lunch, and dinner.</p>
 
-                    <h3>Friday, May 30 – River Day!</h3>
-                    <p>Spend the day enjoying the water! Kayak, canoe, fish, swim, read a book, whatever you desire.</p>
-
-                    <h3>Saturday, May 31 – Celebration Day!</h3>
-                    <p>It’s party time! We’ll be hosting a catered crawfish boil by the river with yard games.</p>
-                    <p>Crawfish boil: 2 PM</p>
-                    <p>We'll finish with a Sardines tournament.</p>
-
-                    <h3>Sunday, June 1 – Relax and Unwind</h3>
-                    <p>A day to enjoy some downtime. Swim, fish, or explore New Braunfels.</p>
-
-                    <h3>Monday, June 2</h3>
-                    <p>Time to head home after a memorable weekend!</p>
-                    <p><em>Food on your own</em></p>
+                    <b>Monday, June 2</b>
+                    <p>Time to head home :( Checkout is at 11 AM!</p>
                 </div>
             </div>
-            <marquee class="rsvp-text">Meals are at 10 AM, 12 PM, and 7 PM at the River Haven house!</marquee>
-            <br />
-            <br />
             <br />
             <br />
 
-            <img id="train" src="train.gif" style="width: 100%;">
+            <img src="butterfly.gif" id="butterfly" style="width: 70%;">
             <div class="what-to-pack" id="what-to-pack">
                 <br />
                 <br />
-                <img src="http://www.gigaglitters.com/created/a7efGTp91x.gif" />
+                <img src="whattopack.gif" />
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <p style="margin-right: 20px; margin-left: 5px; flex: 1;">
+                    <p>
                     <ul>
-                        <li>Comfortable clothing for warm weather (don't forget your
-                            swimmies!) and water shoes</li>
+                        <li>Comfortable clothing for warm weather (don't forget your swimmies!)</li>
+                        <li>River shoes are highly recommended for wading!</li>
                         <li>Fishing gear</li>
                         <li>Flashlights, sunscreen, and bug spray</li>
                         <li>If you're local, consider bringing a fold-up lawn chair!</li>
+                        <li>Please no confetti, glitter, etc</li>
                     </ul>
                     </p>
                     <img src="6zfzzzry39ma1.gif" width="150px"
@@ -800,23 +899,20 @@
             </div>
             <marquee id="frog" direction="left" scrollamount="5"><img src="frog.gif" /></marquee>
             <div class="faqs" id="faq">
-                <img src="http://www.gigaglitters.com/created/tFpQ3N5RgY.gif" />
+                <img src="faqs.gif" />
                 <div style="height: 100%; text-align: left; margin: 10px 0px;">
-                    <p><b>Is this a wedding?</b></p>No! We're thinking of this as a friends
-                    and family reunion.
-                    There
-                    will
-                    be no
-                    ceremony, no wedding dresses, and no flower girls!
+                    <p><b>Can I come late or leave early?</b></p>
 
-                    <p><b>Can we still get you a gift?</b></p>In lieu of gifts, we're taking a small fee to
-                    cover
-                    the
-                    cost
-                    of
-                    the house and catering. Please see "Contributions" section for more information.
-                    <img src="trout.gif" width="150" align="left" hspace="10" vspace="3" />
-                    <br clear="left" />
+                    Of course! We’d love to have you for as much time as you can make it. Just let us know your
+                    plans.
+
+                    <p><b>Is this a wedding?</b>
+                    </p>We're thinking of this as a friends
+                    and family reunion.
+                    There will be no formal ceremony, just love.
+
+                    <p><b>Can we still get you a gift?</b></p>In lieu of gifts, we're asking a fee to cover the cost of
+                    the house and catering. Check out the "Contributions" section for more info.
 
                     <p><b>Is there a dress code?</b></p>No dress code! Wear whatever is most comfortable (and
                     can bear
@@ -824,16 +920,14 @@
 
                     <p><b>Where am I going to sleep?</b></p>We have loosely assigned beds, and will send out
                     floorplans
-                    once we have a better idea of final guest count.
+                    once we have a better idea of the final guest count.
 
 
                     <p><b>Can I bring the kids?</b></p>Yes, please! We have considered kiddos in the final
-                    guestcount, and are planning to house kids in the attached guest house to ensure a
-                    private
-                    and
-                    quiet
-                    space. Please reach out if you have special needs around your
-                    kids.<a href="https://open.spotify.com/playlist/2cJGqb5vfkckqq1STXUosE?si=dbeafbf9db9c426b"
+                    guest count. Families will stay in the attached guest house to ensure a private and quiet space.
+                    Please reach out if you have special requests around your
+                    kids.<a class="link"
+                        href="https://open.spotify.com/playlist/2cJGqb5vfkckqq1STXUosE?si=dbeafbf9db9c426b"
                         target="_blank" style="cursor: pointer;">
 
                         <img src="heart3.gif" width="120" align="right" hspace="10" vspace="3" />
@@ -844,7 +938,7 @@
                     home.
                 </div>
             </div>
-
+            <marquee width="100%" direction="right" scrollamount="5"><img src="trout.gif" /></marquee>
             <div id="rsvp-form">
                 <img src="cowboybaby.gif" width="150" />
                 <iframe
@@ -864,7 +958,9 @@
                 <script type=" text/javascript" src="//counter.websiteout.com/js/13/0/0/0"></script>
             </div>
         </div>
-        <img id="dragon" src="dragon001.gif">
+        <a class="link" href="https://youtu.be/p7tDQWGzEtc?si=6Gjkq9OwUAQkMBh-&t=57" target="_blank">
+            <img id="dragon" src="dragon001.gif">
+        </a>
         <img id="dragonfly" src="dragonfly.gif">
         <img id="welcomer" src="welcomer.gif">
         <img id="knight" src="2-two-knights-fighting.gif">
@@ -874,6 +970,7 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
     <script>
+        updateCountdown()
         document.addEventListener("DOMContentLoaded", () => {
             const docHeight = Math.max(
                 document.body.scrollHeight,
@@ -895,6 +992,15 @@
                 startbtn.src = "speakerstill.jpg";
             }
         });
+        const links = document.querySelectorAll('.link');
+
+        links.forEach(link => {
+            link.addEventListener('click', function () {
+                music.pause();
+                startbtn.src = "speakerstill.jpg";
+            });
+        });
+
         const navButtons = document.querySelectorAll("#nav button");
 
         navButtons.forEach(button => {

@@ -11,6 +11,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="og:image" content="fishscene.gif">
     <title>Callie's World</title>
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <link rel="apple-touch-icon" sizes="128x128" href="zuri.png">
@@ -733,14 +734,15 @@
                     <img src="c4.jpeg">
                 </div>
             </div>
-            <a href="https://open.spotify.com/playlist/2cJGqb5vfkckqq1STXUosE?si=dbeafbf9db9c426b"
-                target="_blank" style="cursor: pointer;">
+            <a href="https://open.spotify.com/playlist/2cJGqb5vfkckqq1STXUosE?si=dbeafbf9db9c426b" target="_blank"
+                style="cursor: pointer;">
                 <img src="castle.gif" />
             </a>
             <div class="accomodations" id="accomodations">
                 <img src="accommodations.gif" width="300" />
                 <p>
-                    If you choose to stay on-site with us, we'll have three houses located close to each other along the Guadalupe River. The main house, River
+                    If you choose to stay on-site with us, we'll have three houses located close to each other along the
+                    Guadalupe River. The main house, River
                     Haven, will be our central gathering spot each day for meals, river time, and hanging out.
                     Additional folks will each stay in their own riverside cabins, just a short 10-minute walk down the
                     road. Please see "Contributions" section for info on how to secure your lodging.
@@ -791,11 +793,11 @@
                 <div style="display: flex; flex-direction:column; justify-content: space-between; align-items: center;">
                     <p>
                         Please no gifts! If you'd like to stay on-site with us, we’re asking for $200 per adult
-                        for lodging for the weekend. All meals, snacks, drinks, and a big ole crawfish boil are included regardless!
+                        for lodging for the weekend. All meals, snacks, drinks, and a big ole crawfish boil are included
+                        regardless!
                     </p>
                     <div id="dolphin-c">
-                        <a style="flex-grow: 1;" href="https://www.youtube.com/watch?v=k9OqZ79FWx0"
-                            target="_blank">
+                        <a style="flex-grow: 1;" href="https://www.youtube.com/watch?v=k9OqZ79FWx0" target="_blank">
                             <img src="dolphin2.gif" width="125px" />
                         </a>
                         <br />
@@ -932,8 +934,7 @@
                     <p><b>Can I bring the kids?</b></p>Yes, please! We have considered kiddos in the final
                     guest count. Families will stay in the attached guest house to ensure a private and quiet space.
                     Please reach out if you have special requests around your
-                    kids.<a
-                        href="https://open.spotify.com/playlist/2cJGqb5vfkckqq1STXUosE?si=dbeafbf9db9c426b"
+                    kids.<a href="https://open.spotify.com/playlist/2cJGqb5vfkckqq1STXUosE?si=dbeafbf9db9c426b"
                         target="_blank" style="cursor: pointer;">
 
                         <img src="heart3.gif" width="120" align="right" hspace="10" vspace="3" />
@@ -946,9 +947,9 @@
             </div>
             <marquee width="100%" direction="right" scrollamount="5"><img src="trout.gif" /></marquee>
             <div id="rsvp-form">
-                <br/>
+                <br />
                 <img src="cowboybaby.gif" width="150" />
-                <br/>
+                <br />
                 <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSfEw-6aaYEMpZqD-AzjwdLmQGLjuIYpX8jyTvgv9aDQyy4-SQ/viewform?embedded=true"
                     width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0">
@@ -997,15 +998,15 @@
 
         document.addEventListener("visibilitychange", function () {
             const audioElement = document.querySelector("audio");
-        
+
             if (document.hidden) {
-              // Pause the audio when the page is hidden
-              audioElement.pause();
+                // Pause the audio when the page is hidden
+                audioElement.pause();
             } else if (!manuallyPaused) {
-              // Resume only if the user didn't manually pause
-              audioElement.play();
+                // Resume only if the user didn't manually pause
+                audioElement.play();
             }
-          });
+        });
 
         startbtn.addEventListener("click", () => {
             if (music.paused) {
@@ -1018,7 +1019,7 @@
                 manuallyPaused = true;
             }
         });
-        
+
         const navButtons = document.querySelectorAll("#nav button");
         navButtons.forEach(button => {
             button.addEventListener("click", () => {

@@ -355,7 +355,7 @@
         #dragon {
             position: absolute;
             bottom: -25px;
-            left: 41%;
+            left: 45%;
             width: 150px;
         }
 
@@ -419,6 +419,33 @@
                 left: 2%;
             }
         }
+
+        #sun {
+            width: 75px;
+            height: 100px;
+
+        }
+
+        .sunx {
+            position: absolute;
+            z-index: 999;
+            left: 0;
+            top: 0;
+        }
+
+        @keyframes x {
+            100% {
+                transform: translateX(calc(100vw - 75px));
+
+            }
+        }
+
+        @keyframes y {
+            100% {
+                transform: translateY(calc(var(--doc-height) - 100px));
+            }
+        }
+
 
         @keyframes scrollDown {
             0% {
@@ -588,6 +615,11 @@
         }
     </style>
 </head>
+<div class="sunx">
+    <div class="suny">
+        <img id="sun" src="creepsun.gif" />
+    </div>
+</div>
 <div class="container" id="body">
     <div class="falling"><img src="fallingheart.gif"></div>
     <div class="falling"><img src="fallingheart.gif"></div>
@@ -980,18 +1012,17 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.26/Tone.js"></script>
     <script>
+        document.documentElement.style.setProperty('--doc-height', `${document.documentElement.scrollHeight}px`);
+
+        const sunX = document.querySelector(".sunx");
+        const sunY = document.querySelector(".suny");
+
+        const randomYDuration = Math.random() * (33 - 20) + 20;
+        sunX.style.animation = `x 3s linear infinite alternate`;
+        sunY.style.animation = `y ${randomYDuration}s linear infinite alternate`;
+
         let manuallyPaused = false;
         updateCountdown()
-        document.addEventListener("DOMContentLoaded", () => {
-            const docHeight = Math.max(
-                document.body.scrollHeight,
-                document.body.offsetHeight,
-                document.documentElement.clientHeight,
-                document.documentElement.scrollHeight,
-                document.documentElement.offsetHeight
-            );
-            document.documentElement.style.setProperty('--doc-height', `${docHeight}px`);
-        });
         const startbtn = document.getElementById("music_button");
         const music = document.getElementById("music");
 
@@ -999,10 +1030,8 @@
             const audioElement = document.querySelector("audio");
 
             if (document.hidden) {
-                // Pause the audio when the page is hidden
                 audioElement.pause();
             } else if (!manuallyPaused) {
-                // Resume only if the user didn't manually pause
                 audioElement.play();
             }
         });

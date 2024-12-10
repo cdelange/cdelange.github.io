@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, yellow, orange);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: red;
+            font-size: 10vw;
+            text-shadow: 2px 2px 5px yellow;
+            animation: flash 1s infinite alternate;
+            margin: 20px 0;
+        }
+
+        @keyframes flash {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        .blinking {
+            font-size: 6vw;
+            color: blue;
+            animation: blink 0.5s infinite alternate;
+        }
+
+        @keyframes blink {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        .marquee {
+            font-size: 8vw;
+            font-weight: bold;
+            color: green;
+        }
+
+        .button {
+            font-size: 6vw;
+            font-weight: bold;
+            background-color: lime;
+            color: black;
+            padding: 10px 20px;
+            border: 5px dashed red;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: yellow;
+            color: red;
+        }
+
+        .notice {
+            font-size: 4vw;
+            color: purple;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Congratulations!!!</h1>
+    <p class="blinking">You have been selected to win an exclusive prize!</p>
+
+    <marquee class="marquee">Click the button below to claim your reward!</marquee>
+
+    <a href="#" class="button" onclick="window.close(); return false;">CLAIM YOUR PRIZE NOW!</a>
+
+    <p class="notice">*Offer expires in 5 minutes. Act fast!</p>
+
+    <script>
+        // Countdown timer to create urgency
+        let timeLeft = 300;
+        const timer = setInterval(() => {
+            timeLeft--;
+            document.querySelector('.notice').textContent = `*Offer expires in ${timeLeft} seconds. Act fast!`;
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                document.querySelector('.notice').textContent = "*Offer expired. Too bad!";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
